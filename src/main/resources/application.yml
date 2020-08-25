@@ -1,9 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://john.db.elephantsql.com:5432/pbnzqpub
-    username: pbnzqpub
-    password: VsXabrR7v1U_2bmWblVWrWyEPcBYiRcK
-    driver-class-name: org.postgresql.Driver
-
-server:
-  port: 8080
