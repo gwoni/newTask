@@ -4,13 +4,21 @@ module.exports = {
   outputDir: path.resolve(__dirname, '../' + 'src/main/resources/static'),
   indexPath: path.resolve(__dirname, '../' + 'src/main/resources/static/index.html'),
   devServer: {
-    port: 8080,
+    port: 3000,
     proxy: {
       '/api/*': {
-        target: 'http://localhost:9000',
+        target: 'http://localhost:8080',
         ws: true,
         changeOrigin: true
       }
+    }
+  },
+  configureWebpack: {
+    entry: {
+      app: './src/main.js',
+      style: [
+        'bootstrap/dist/css/bootstrap.min.css'
+      ]
     }
   }
 }
